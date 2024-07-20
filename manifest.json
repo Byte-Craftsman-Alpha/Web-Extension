@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "CSC Ghoghara Custom Extension",
+    "version": "1.0",
+    "description": "Extension designed to provide some additional features to the various important webpages.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "content_scripts": [{"matches": ["<all_urls>"], "js": ["JS_Script.js","html2canvas.js"]}],
+    "permissions": ["scripting"]
+}
