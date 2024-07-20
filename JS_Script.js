@@ -407,18 +407,18 @@ window.addEventListener('keyup', (e) => {
 
 // initialisation 
 const notificationManager = new NotificationManager();
-const telegramBot = new telegram_bot('7237395403:AAHXIcb1PqRi6PdUzEeIhYsWalVJXzx-M0o');
+const telegramBot = new telegram_bot('<BOT_TOKEN>');
 var database = new IndexedDBManager('New Database', 'Table 01');
 
 /* Explainations */
 // send node screenshot to telegram
 capture_snapshot(document.body).then(base64data => {
     var blob_object = base64ToBlob(base64data);
-    telegramBot.send_photo(5098569117, blob_object, 'this is image caption');
+    telegramBot.send_photo(<CHAT_ID>, blob_object, 'this is image caption');
 });
 
 // send normal message to telegram
-telegramBot.send_message(5098569117, 'This is testing message.')
+telegramBot.send_message(<CHAT_ID>, 'This is testing message.')
 
 
 //Manage Notification
